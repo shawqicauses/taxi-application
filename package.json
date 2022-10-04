@@ -1,0 +1,41 @@
+{
+  "version": "0.1.0",
+  "name": "taxi-application",
+  "description": "Taxi application using Next.JS, TypeScript, and Tailwind CSS",
+  "author": "shawqicauses <shawqicauses@outlook.com>",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "2.13.1",
+    "firebase": "9.10.0",
+    "next": "12.3.0",
+    "prop-types": "15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.18",
+    "@types/react": "18.0.20",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "10.4.11",
+    "eslint": "8.24.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-react": "7.31.8",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "postcss": "8.4.16",
+    "prettier": "2.7.1",
+    "tailwindcss": "3.1.8",
+    "typescript": "4.8.3"
+  }
+}

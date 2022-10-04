@@ -1,0 +1,8 @@
+.env.local
+.vscode
+.swc
+.next
+.vercel
+build
+node_modules
+package-lock.json
