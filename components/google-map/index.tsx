@@ -1,34 +1,19 @@
 import {GoogleMap, MarkerF} from "@react-google-maps/api"
-import {FC, Fragment, useMemo} from "react"
+import {FC, useMemo} from "react"
 
-const MyGoogleMap: FC<{taxiOrders: (TaxiOrder | null | undefined)[]}> =
-  function MyGoogleMap({taxiOrders}) {
+const MyGoogleMap: FC<{taxis: (Taxi | null | undefined)[]}> =
+  function MyGoogleMap({taxis}) {
     const center = useMemo(() => ({lat: 31.5, lng: 34}), [])
     return (
       <GoogleMap
         zoom={10}
         center={center}
         mapContainerClassName="w-screen h-screen">
-        {taxiOrders.map((taxiOrder, index) => {
-          if (!taxiOrder) return null
-          const location = {
-            start: {
-              lat: Number(taxiOrder.start_location_lat),
-              lng: Number(taxiOrder.start_location_lng)
-            },
-            end: {
-              lat: Number(taxiOrder.end_location_lat),
-              lng: Number(taxiOrder.end_location_lng)
-            }
-          }
-
-          const key = `${location.start.lat}-${index}`
-          return (
-            <Fragment key={key}>
-              <MarkerF position={location.start} />
-              <MarkerF position={location.end} />
-            </Fragment>
-          )
+        {taxis.map((taxi, index) => {
+          if (!taxi) return null
+          const key = `${taxi.lat}-${index}`
+          const position = {lat: taxi.lat, lng: taxi.lng}
+          return <MarkerF key={key} position={position} />
         })}
       </GoogleMap>
     )
